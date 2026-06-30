@@ -1,0 +1,17 @@
+# Ignore documentation
+*.pdf
+*.png
+*.zip
+
+# Ignore screenshots folder
+Screenshots/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
