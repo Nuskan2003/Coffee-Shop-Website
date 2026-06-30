@@ -1,148 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Coffee Shop</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Brew Haven Coffee</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
 </head>
+
 <body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                ☕ Brew Haven
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#products">
+                        Products
+                    </a></li>
+
+                <li><a href="#about">
+                        About
+                    </a></li>
+
+                <li><a href="#pricing">
+                        Pricing
+                    </a></li>
+
+                <li><a href="#contact">
+                        Contact
+                    </a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
     <section class="hero">
-        <h1>Coffee For You</h1>
+
+        <div class="hero-content">
+
+            <h1>
+                Crafted Coffee<br>
+                Made With Passion
+            </h1>
+
+            <p>
+
+                Discover premium handcrafted coffee made
+                from the finest beans around the world.
+
+            </p>
+
+            <a href="#products"
+               class="hero-btn">
+
+                Explore Menu
+
+            </a>
+
+        </div>
+
     </section>
 
-    <section class="products">
-        <h2>Featured Products</h2>
+    <!-- ================= PRODUCTS ================= -->
 
-        <center>
-        <div class="product-row">   
-            <img src="Images/coffee 4.jpg" alt="image of a coffee" height="300px" width="300px" class="cof">
-            <div class="product-info">
-                <p>Cappuccino</p>
-                <p>A perfect balance of steamed milk and rich espresso, topped with a light dusting of cocoa powder. Ideal for a relaxed adfternoon!</p>
-                <p>Ingredients: Espresso, steamed milk, and a touch of magic.</p>
-                <p>Available in small, medium, and large</p>
-                <button class="orderBtn">Order</button>
+    <section class="products"
+             id="products">
+
+        <h2>
+
+            Featured Coffee
+
+        </h2>
+
+        <div class="product-container">
+
+            <!-- Cappuccino -->
+
+            <div class="product-row">
+
+                <img src="Images/coffee 4.jpg"
+                     alt="Cappuccino">
+
+                <div class="product-info">
+
+                    <h3>Cappuccino</h3>
+
+                    <p>
+                        A perfect balance of steamed milk and
+                        rich espresso topped with cocoa powder.
+                    </p>
+
+                    <p>
+                        Ingredients:
+                        Espresso, steamed milk and a touch of magic.
+                    </p>
+
+                    <button class="orderBtn">
+
+                        Order Now
+
+                    </button>
+
+                </div>
+
             </div>
-        </div>
 
-        <div class="product-row reverse">              
-            <img src="Images/coffee 5.jpg" alt="image of a coffee" height="300px" width="300px" class="cof">
-            <div class="product-info">
-                <p>Espresso</p>
-                <p>Experience the purest, boldest coffee flavor in every sip. This one's for the coffee purists!</p>
-                <p>Pairs perfectly with your favourite pastry or an early morning newspaper.</p>
-                <p>special offer: Get a second espresso at 50% off during happy hours (4 PM - 6 PM)</p>    
-                <button class="orderBtn">Order</button>
+            <!-- Espresso -->
+
+            <div class="product-row reverse">
+
+                <img src="Images/coffee 5.jpg"
+                     alt="Espresso">
+
+                <div class="product-info">
+
+                    <h3>Espresso</h3>
+
+                    <p>
+
+                        Pure bold coffee flavour for those
+                        who love authentic espresso.
+
+                    </p>
+
+                    <p>
+
+                        Happy Hour:
+                        Buy one and get the second at 50% off.
+
+                    </p>
+
+                    <button class="orderBtn">
+
+                        Order Now
+
+                    </button>
+
+                </div>
+
             </div>
-        </div>
 
-        <div class="product-row">              
-            <img src="Images/coffee 6.jpg" alt="image of a coffee" height="300px" width="300px" class="cof">
-            <div class="product-info">
-                <p>Latte</p>
-                <p>A creamy delight of espresso and steamed milk, adorned with a delicate layer of foam.</p>
-                <p>Available flavours: Vanilla, Caramel, Hazelnut, or Classic.</p>
-                <p>Customizable sweetness levels and non-dairy milk options available.</p>
-                <button class="orderBtn">Order</button>
+            <!-- Latte -->
+
+            <div class="product-row">
+
+                <img src="Images/coffee 6.jpg"
+                     alt="Latte">
+
+                <div class="product-info">
+
+                    <h3>Latte</h3>
+
+                    <p>
+
+                        Creamy espresso with steamed milk
+                        and a soft layer of foam.
+
+                    </p>
+
+                    <p>
+
+                        Available in Vanilla,
+                        Caramel, Hazelnut and Classic.
+
+                    </p>
+
+                    <button class="orderBtn">
+
+                        Order Now
+
+                    </button>
+
+                </div>
+
             </div>
-        </div>
 
-        <div class="product-row reverse">               
-            <img src="Images/coffee 7.jpg" alt="image of a coffee" height="300px" width="300px" class="cof">
-            <div class="product-info">
-                <p>Mocha</p>
-                <p>A luxurious blend of chocolate and coffee, finished with whipped cream and a drizzle of chocolate syrup.</p>
-                <p>Chocolate and coffe lovers looking for the perfect fusion.</p>
-                <p>Extra whipped cream or a dash of cinnamon on top for an enhanced treat.</p>
-                <button class="orderBtn">Order</button>
+            <!-- Mocha -->
+
+            <div class="product-row reverse">
+
+                <img src="Images/coffee 7.jpg"
+                     alt="Mocha">
+
+                <div class="product-info">
+
+                    <h3>Mocha</h3>
+
+                    <p>
+
+                        Rich chocolate meets espresso,
+                        finished with whipped cream.
+
+                    </p>
+
+                    <p>
+
+                        A favourite for chocolate lovers.
+
+                    </p>
+
+                    <button class="orderBtn">
+
+                        Order Now
+
+                    </button>
+
+                </div>
+
             </div>
-        </div>
 
-        <div class="product-row">               
-            <img src="Images/coffee 8.jpg" alt="image of a coffee" height="300px" width="300px" class="cof">
-            <div class="product-info">
-                <p>Americano</p>
-                <p>Rich espresso combined with hot water to create smooth, milder coffee experience.</p>
-                <p>Originated as a preferred coffe style of americano soldiers during world war ||.</p>
-                <p>Available in Regular, Large, and Extra-Large.</p>
-                <button class="orderBtn">Order</button>
+            <!-- Americano -->
+
+            <div class="product-row">
+
+                <img src="Images/coffee 8.jpg"
+                     alt="Americano">
+
+                <div class="product-info">
+
+                    <h3>Americano</h3>
+
+                    <p>
+
+                        Smooth espresso diluted with hot
+                        water for a rich taste.
+
+                    </p>
+
+                    <p>
+
+                        Available in Small,
+                        Medium and Large.
+
+                    </p>
+
+                    <button class="orderBtn">
+
+                        Order Now
+
+                    </button>
+
+                </div>
+
             </div>
+
         </div>
 
-        <div id="orderForm" class="order-form">
-            <h3>Place Your Order</h3>
-
-            <input type="text" placeholder="Name" required>
-            <input type="text" placeholder="Coffee Type" required>
-            <input type="number" placeholder="Quantity" required>
-
-            <button onclick="closeForm()">Submit</button>
-        </div>
-        
-        </center>
     </section>
 
-    <section class="about-us">
-        <h2>Why choose us?</h2>
-        <ol>
-            <li>High-quality coffee beans</li>
-            <li>Experienced baristas</li>
-            <li>Cozy atmosphere</li>
-            <li>Friendly staff</li>
-            <li>Great customer service</li>
-        </ol>
+    <!-- ================= ORDER FORM ================= -->
+
+    <div id="orderForm"
+         class="order-form">
+
+        <div class="form-box">
+
+            <h2>
+
+                Place Your Order
+
+            </h2>
+
+            <input type="text"
+                   placeholder="Your Name">
+
+            <input type="text"
+                   placeholder="Coffee Type">
+
+            <input type="number"
+                   placeholder="Quantity">
+
+            <button onclick="closeForm()">
+
+                Submit Order
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about"
+             class="about-us">
+
+        <h2>
+
+            Why Choose Us
+
+        </h2>
+
+        <div class="about-grid">
+
+            <div>☕ Premium Coffee Beans</div>
+            <div>👨‍🍳 Professional Baristas</div>
+            <div>🏡 Cozy Environment</div>
+            <div>😊 Friendly Service</div>
+            <div>⭐ Excellent Quality</div>
+
+        </div>
+
     </section>
 
-    <section class="pricing">
-        <h2>Price List</h2>
+    <!-- ================= PRICING ================= -->
+
+    <section id="pricing"
+             class="pricing">
+
+        <h2>
+
+            Coffee Prices
+
+        </h2>
+
         <table>
+
             <tr>
-                <th></th>
+
+                <th>Size</th>
                 <th>Cappuccino</th>
                 <th>Espresso</th>
                 <th>Latte</th>
                 <th>Mocha</th>
                 <th>Americano</th>
+
             </tr>
+
             <tr>
-                <td class="size">Small</td>
+
+                <td>Small</td>
                 <td>Rs.300</td>
                 <td>Rs.250</td>
                 <td>Rs.320</td>
                 <td>Rs.280</td>
                 <td>Rs.350</td>
+
             </tr>
+
             <tr>
-                <td class="size">Medium</td>
+
+                <td>Medium</td>
                 <td>Rs.400</td>
                 <td>Rs.370</td>
                 <td>Rs.400</td>
                 <td>Rs.350</td>
                 <td>Rs.470</td>
+
             </tr>
+
             <tr>
-                <td class="size">Large</td>
+
+                <td>Large</td>
                 <td>Rs.500</td>
                 <td>Rs.450</td>
                 <td>Rs.550</td>
                 <td>Rs.420</td>
                 <td>Rs.600</td>
+
             </tr>
-            
+
         </table>
-    </section>
-    <section class="more-info">
-        <h2>Learn More</h2>
-        <ul>
-            <li><a href="https://en.wikipedia.org/wiki/Cappuccino" target="_blank">Cappucino on Wikipedia</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Espresso" target="_blank">Espresso on Wikipedia</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Latte" target="_blank">Latte on Wikipedia</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Mocha" target="_blank">Mocha on Wikipedia</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Americano" target="_blank">Americano on Wikipedia</a></li>
-        </ul>
+
     </section>
 
+    <!-- ================= CONTACT ================= -->
+
+    <section
+        id="contact"
+        class="contact">
+
+        <h2>
+
+            Learn More
+
+        </h2>
+
+        <ul>
+
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Cappuccino"
+                   target="_blank">
+                    Cappuccino
+                </a>
+            </li>
+
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Espresso"
+                   target="_blank">
+                    Espresso
+                </a>
+            </li>
+
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Latte"
+                   target="_blank">
+                    Latte
+                </a>
+            </li>
+
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Mocha"
+                   target="_blank">
+                    Mocha
+                </a>
+            </li>
+
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Caff%C3%A8_Americano"
+                   target="_blank">
+                    Americano
+                </a>
+            </li>
+
+        </ul>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Brew Haven Coffee.
+        Crafted with ❤️ and freshly brewed every day.
+
+    </footer>
+
     <script src="function.js"></script>
+
 </body>
+
 </html>
