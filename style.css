@@ -1,32 +1,62 @@
-/* ==========================================
-   GOOGLE RESET
-========================================== */
+/* =====================================================
+   GOOGLE FONT & RESET
+===================================================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     scroll-behavior:smooth;
-    font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#f8f5f2;
+
+    font-family:'Poppins',sans-serif;
+    background:#f7f4ef;
     color:#333;
     overflow-x:hidden;
-    line-height:1.6;
+    transition:.4s;
+
 }
 
-/* ==========================================
-   NAVBAR
-========================================== */
+body.dark{
 
-header{
+    background:#151515;
+    color:#f5f5f5;
+
+}
+
+/* =====================================================
+   SCROLL BAR
+===================================================== */
+
+#progressBar{
+
     position:fixed;
     top:0;
     left:0;
+
+    width:0%;
+    height:5px;
+
+    background:#c68b59;
+
+    z-index:99999;
+
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+header{
+
+    position:fixed;
     width:100%;
+    top:0;
+    left:0;
     z-index:1000;
+
 }
 
 .navbar{
@@ -38,24 +68,26 @@ header{
     padding:18px 8%;
 
     background:rgba(0,0,0,.45);
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(15px);
 
-    transition:.3s;
+    transition:.4s;
+
 }
 
 .logo{
 
     color:white;
-    font-size:28px;
+    font-size:30px;
     font-weight:700;
-    letter-spacing:1px;
 
 }
 
 .nav-links{
 
     list-style:none;
+
     display:flex;
+
     gap:35px;
 
 }
@@ -64,7 +96,6 @@ header{
 
     color:white;
     text-decoration:none;
-    font-size:17px;
     transition:.3s;
 
 }
@@ -75,16 +106,48 @@ header{
 
 }
 
-/* ==========================================
+.nav-icons{
+
+    display:flex;
+    gap:15px;
+
+}
+
+.nav-icons button{
+
+    width:45px;
+    height:45px;
+
+    border:none;
+    border-radius:50%;
+
+    background:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.nav-icons button:hover{
+
+    background:#c68b59;
+    color:white;
+
+}
+
+/* =====================================================
    HERO
-========================================== */
+===================================================== */
 
 .hero{
 
     height:100vh;
 
     background:
+
     linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+
     url("Images/background.jpg");
 
     background-size:cover;
@@ -104,23 +167,36 @@ header{
 
 .hero-content{
 
-    max-width:750px;
+    max-width:800px;
+
+    animation:fadeUp 1s ease;
 
 }
 
 .hero h1{
 
-    font-size:65px;
-    font-weight:700;
+    font-size:72px;
 
-    margin-bottom:20px;
+    line-height:1.1;
+
+    margin-bottom:25px;
 
 }
 
 .hero p{
 
     font-size:20px;
-    margin-bottom:35px;
+
+    margin-bottom:40px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
 
 }
 
@@ -128,49 +204,59 @@ header{
 
     display:inline-block;
 
-    padding:15px 40px;
+    padding:15px 35px;
 
-    background:#c68b59;
-
-    color:white;
-
-    border-radius:50px;
+    border-radius:40px;
 
     text-decoration:none;
 
-    transition:.3s;
+    color:white;
 
-    font-size:18px;
+    background:#c68b59;
+
+    transition:.35s;
 
 }
 
 .hero-btn:hover{
 
-    background:#8c5b34;
+    transform:translateY(-5px);
 
-    transform:translateY(-4px);
+    background:#8d5c36;
 
 }
 
-/* ==========================================
+.secondary{
+
+    background:transparent;
+
+    border:2px solid white;
+
+}
+
+.secondary:hover{
+
+    background:white;
+    color:#333;
+
+}
+
+/* =====================================================
    PRODUCTS
-========================================== */
+===================================================== */
 
 .products{
 
-    padding:100px 10%;
+    padding:100px 8%;
 
 }
 
 .products h2{
 
     text-align:center;
-
-    font-size:42px;
-
     margin-bottom:70px;
 
-    color:#4b2e2b;
+    font-size:45px;
 
 }
 
@@ -178,25 +264,33 @@ header{
 
     display:flex;
     flex-direction:column;
-    gap:60px;
+    gap:50px;
 
 }
 
 .product-row{
 
     display:flex;
+
     align-items:center;
-    gap:60px;
 
-    background:white;
+    gap:40px;
 
-    border-radius:20px;
+    border-radius:25px;
 
     overflow:hidden;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    background:white;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
 
     transition:.4s;
+
+}
+
+body.dark .product-row{
+
+    background:#252525;
 
 }
 
@@ -214,7 +308,7 @@ header{
 
 .product-row img{
 
-    width:350px;
+    width:360px;
     height:300px;
 
     object-fit:cover;
@@ -223,35 +317,35 @@ header{
 
 .product-info{
 
-    padding:35px;
+    padding:40px;
 
 }
 
 .product-info h3{
 
-    font-size:32px;
+    font-size:34px;
 
-    margin-bottom:15px;
-
-    color:#4b2e2b;
+    margin-bottom:20px;
 
 }
 
 .product-info p{
 
-    margin-bottom:15px;
+    margin-bottom:20px;
 
     color:#666;
 
 }
 
+body.dark .product-info p{
+
+    color:#ddd;
+
+}
+
 .orderBtn{
 
-    padding:14px 30px;
-
-    background:#c68b59;
-
-    color:white;
+    padding:14px 35px;
 
     border:none;
 
@@ -259,7 +353,9 @@ header{
 
     cursor:pointer;
 
-    font-size:16px;
+    background:#c68b59;
+
+    color:white;
 
     transition:.3s;
 
@@ -267,28 +363,28 @@ header{
 
 .orderBtn:hover{
 
-    background:#8c5b34;
-
     transform:scale(1.05);
+
+    background:#8d5c36;
 
 }
 
-/* ==========================================
-   ORDER MODAL
-========================================== */
+/* =====================================================
+   MODAL
+===================================================== */
 
 .order-form{
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(0,0,0,.6);
 
     display:none;
 
     justify-content:center;
     align-items:center;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
 
     z-index:10000;
 
@@ -298,25 +394,21 @@ header{
 
     background:white;
 
-    padding:40px;
+    width:400px;
 
     border-radius:20px;
 
-    width:380px;
+    padding:40px;
 
     display:flex;
-
     flex-direction:column;
-
     gap:18px;
 
 }
 
-.form-box h2{
+body.dark .form-box{
 
-    text-align:center;
-
-    color:#4b2e2b;
+    background:#222;
 
 }
 
@@ -324,11 +416,9 @@ header{
 
     padding:14px;
 
-    border:1px solid #ddd;
-
     border-radius:10px;
 
-    font-size:16px;
+    border:1px solid #ddd;
 
 }
 
@@ -346,19 +436,15 @@ header{
 
     cursor:pointer;
 
-    font-size:17px;
-
 }
 
-/* ==========================================
+/* =====================================================
    ABOUT
-========================================== */
+===================================================== */
 
 .about-us{
 
-    padding:100px 10%;
-
-    background:white;
+    padding:100px 8%;
 
 }
 
@@ -366,9 +452,9 @@ header{
 
     text-align:center;
 
-    font-size:40px;
-
     margin-bottom:60px;
+
+    font-size:42px;
 
 }
 
@@ -384,17 +470,23 @@ header{
 
 .about-grid div{
 
-    background:#f7f2ee;
+    background:white;
 
-    padding:40px;
-
-    text-align:center;
+    padding:35px;
 
     border-radius:18px;
 
-    font-size:20px;
+    text-align:center;
 
     transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+}
+
+body.dark .about-grid div{
+
+    background:#252525;
 
 }
 
@@ -406,13 +498,13 @@ header{
 
 }
 
-/* ==========================================
+/* =====================================================
    PRICING
-========================================== */
+===================================================== */
 
 .pricing{
 
-    padding:100px 10%;
+    padding:100px 8%;
 
 }
 
@@ -420,9 +512,7 @@ header{
 
     text-align:center;
 
-    margin-bottom:50px;
-
-    font-size:40px;
+    margin-bottom:45px;
 
 }
 
@@ -434,7 +524,11 @@ table{
 
     background:white;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+body.dark table{
+
+    background:#252525;
 
 }
 
@@ -446,7 +540,8 @@ th{
 
 }
 
-th,td{
+th,
+td{
 
     padding:18px;
 
@@ -456,29 +551,25 @@ th,td{
 
 tr:nth-child(even){
 
-    background:#f5f5f5;
+    background:#f2f2f2;
 
 }
 
-/* ==========================================
+body.dark tr:nth-child(even){
+
+    background:#333;
+
+}
+
+/* =====================================================
    CONTACT
-========================================== */
+===================================================== */
 
 .contact{
 
-    padding:100px 10%;
-
-    background:white;
+    padding:100px 8%;
 
     text-align:center;
-
-}
-
-.contact h2{
-
-    margin-bottom:40px;
-
-    font-size:40px;
 
 }
 
@@ -496,63 +587,123 @@ tr:nth-child(even){
 
 .contact a{
 
-    color:#4b2e2b;
+    color:#c68b59;
 
     text-decoration:none;
 
-    font-size:18px;
-
-    transition:.3s;
-
 }
 
-.contact a:hover{
-
-    color:#c68b59;
-
-}
-
-/* ==========================================
+/* =====================================================
    FOOTER
-========================================== */
+===================================================== */
 
 footer{
 
-    background:#2b1d18;
+    padding:30px;
+
+    background:#2d1d17;
 
     color:white;
 
     text-align:center;
 
-    padding:30px;
+}
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+#topBtn{
+
+    position:fixed;
+
+    right:30px;
+    bottom:30px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#c68b59;
+
+    color:white;
+
+    cursor:pointer;
+
+    display:none;
+
+    font-size:20px;
+
+    transition:.3s;
 
 }
 
-/* ==========================================
+#topBtn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================================
    RESPONSIVE
-========================================== */
+===================================================== */
 
 @media(max-width:900px){
 
     .navbar{
 
-        flex-direction:column;
-
-        gap:20px;
+        flex-wrap:wrap;
 
     }
 
     .nav-links{
 
-        flex-wrap:wrap;
+        width:100%;
 
-        justify-content:center;
+        display:none;
+
+        flex-direction:column;
+
+        text-align:center;
+
+        margin-top:20px;
+
+    }
+
+    .nav-links.active{
+
+        display:flex;
 
     }
 
     .hero h1{
 
-        font-size:45px;
+        font-size:48px;
 
     }
 
@@ -566,7 +717,7 @@ footer{
     .product-row img{
 
         width:100%;
-        height:300px;
+        height:280px;
 
     }
 
